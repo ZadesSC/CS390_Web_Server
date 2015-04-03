@@ -69,9 +69,19 @@ public class Servlet extends HttpServlet {
             }
 
             while(rs.next()) {
-                out.println(rs.getString("Title"));
-                out.println(rs.getString("URL"));
-                out.println(rs.getString("Description"));
+                //<img src="smiley.gif" alt="Smiley face" height="42" width="42">
+                if(rs.getString("Image") != null && !rs.getString("Image").equals("https://www.cs.purdue.edu/images/logo.svg"))
+                {
+                    out.println("<img src=" + rs.getString("Image") + " height=\"100\" width=\"100\">");
+                }
+                else
+                {
+                    out.println("<img src=" + "https://www.cs.purdue.edu/images/brand.svg" + " height=\"100\" width=\"100\">");
+                }
+                out.println("<h2><a href=" + rs.getString("URL") + ">" + rs.getString("Title") +"</a></h2>");
+                //out.println("<h1>" + rs.getString("Title") + "</h1>");
+                //out.println("<h2>" + rs.getString("URL") + "</h2>");
+                out.println("<body>" + rs.getString("Description") + "<body>");
             }
 
 

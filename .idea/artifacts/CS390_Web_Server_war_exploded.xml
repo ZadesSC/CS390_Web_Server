@@ -6,6 +6,12 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="CS390 Web Server" />
+          <element id="library" level="project" name="org" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.15-bin" />
+          <element id="library" level="project" name="org.json-20120521" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.15-bin (2)" />
         </element>
       </element>
     </root>
