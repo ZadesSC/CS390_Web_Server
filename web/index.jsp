@@ -8,9 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <title>Elgoog</title>
   </head>
   <body>
+  <center> <h1>Elgoog</h1></center>
+
+  <center>
+    <form method="post" action="Servlet">
+      <input name="keywords" type="text">
+      <input type="submit" value="Search"/>
+    </form>
+  </center>
 
   </body>
+
 </html>
