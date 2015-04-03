@@ -68,6 +68,25 @@ public class Servlet extends HttpServlet {
                 rs = pStatement.executeQuery();
             }
 
+            String searchBox = "<html>\n" +
+                    "  <head>\n" +
+                    "    <title>Elgoog</title>\n" +
+                    "  </head>\n" +
+                    "  <body>\n" +
+                    "  <center> <h1>Elgoog</h1></center>\n" +
+                    "\n" +
+                    "  <center>\n" +
+                    "    <form method=\"post\" action=\"Servlet\">\n" +
+                    "      <input name=\"keywords\" type=\"text\">\n" +
+                    "      <input type=\"submit\" value=\"Search\"/>\n" +
+                    "    </form>\n" +
+                    "  </center>\n" +
+                    "\n" +
+                    "  </body>\n" +
+                    "\n" +
+                    "</html>";
+            out.println(searchBox);
+
             while(rs.next()) {
                 //<img src="smiley.gif" alt="Smiley face" height="42" width="42">
                 if(rs.getString("Image") != null && !rs.getString("Image").equals("https://www.cs.purdue.edu/images/logo.svg"))
